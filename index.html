@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="./assets/logo.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -14,10 +15,14 @@
   <body>
     <header class="sticky top-0  md:px-14 px-7 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
       <div class="container header-inner flex items-center justify-between py-3">
-        <a class="brand flex items-center gap-3" href="#">
+        <a class="brand flex items-center gap-3" href="index.html">
           <img src="assets/logo.png" alt="Nikki Beauty Maison logo placeholder" class="h-16 w-auto">
         </a>
-        <button class="nav-toggle md:hidden" aria-label="Toggle navigation">☰</button>
+        <button class="nav-toggle md:hidden" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav class="site-nav hidden md:flex gap-4 items-center">
           <a class="text-[#000435] hover:text-sky-600 font-[400] text-[13px] px-2 py-1 rounded-md" href="#services">Services</a>
           <a class="text-[#000435] hover:text-sky-600 font-[400] text-[13px] px-2 py-1 rounded-md" href="#about">About</a>
@@ -29,18 +34,21 @@
     </header>
 
     <main>
-      <section class="relative p-11 md:p-36 py-36 pt-24 bg-[#000435] md:pt-28 flex justify-center items-center text-center flex-col">
-            <h2 class="text-[20px] text-[#A48111] lg:text-[24px] z-30 font-great mb-4 ">Nikki Beauty Maison</h2>
-            <h1 class="tagline text-[25px] md:text-4xl z-30 text-white mb-3 leading-7">Professional makeup services designed to enhance your natural beauty for any event.</h1>
-            <p class="sub text-sm text-[17px] z-30 text-white">We create personalized looks, so you feel amazing and confident.</p>
-            <a class="mt-6 z-30 text-white bg-[#A48111] hover:bg-[#845422] px-5 py-2 rounded-md font-[400] text-[13px] md:text-sm" href="booking.html">Book a Consultation</a>
+      <section class="relative p-11 md:p-36 py-36 pt-24 bg-[#000435] md:pt-28 flex justify-center items-center text-center flex-col overflow-hidden">
+            <!-- Background Decorations -->
+            <div class="bg-blob animate-pulse-slow bg-[#A48111] w-64 h-64 -top-20 -left-20 opacity-20"></div>
+            <div class="bg-blob animate-pulse-slow bg-[#A48111] w-96 h-96 -bottom-32 -right-32 opacity-20" style="animation-delay: 2s;"></div>
+            
+      
 
-          <div>
-            <img src="" alt="">
-          </div>
+            <h2 class="reveal reveal-slow text-[23px] text-[#A48111] lg:text-[24px] z-30 font-great mb-4 ">Nikki Beauty Maison</h2>
+            <h1 class="reveal reveal-slow tagline text-[25px] md:text-4xl z-30 text-white mb-3 leading-7">Professional makeup services designed to enhance your natural beauty for any event.</h1>
+            <p class="reveal reveal-slow sub text-sm text-[17px] z-30 text-white">We create personalized looks, so you feel amazing and confident.</p>
+            <a class="reveal reveal-slow mt-6 z-30 text-white bg-[#A48111] hover:bg-[#845422] px-5 py-2 rounded-md font-[400] text-[13px] md:text-sm" href="booking.html">Book a Consultation</a>
+
              </section>
 
-      <section id="about" class="bg-[#000435] px-7 py-16 md:py-36 md:px-16">
+      <section id="about" class="reveal bg-[#000435] px-7 py-16 md:py-36 md:px-16">
         <div class="container">
           <h2 class="text-[11px] lg:text-[12px] text-[#A48111] font-semibold mb-4 tracking-widest">NIKKI BEAUTY MAISON</h2>
           <h2 class="text-3xl font-semibold text-slate-300 mb-6">About Us</h2>
@@ -50,7 +58,7 @@
           </div>
       </section>
 
-      <section id="services" class="px-7 py-16 md:px-16">
+      <section id="services" class="reveal px-7 py-16 md:px-16">
         <div class="container">
           <h2 class="text-[11px] lg:text-[12px] text-[#A48111] font-semibold mb-4 tracking-widest">MAKEUP SERVICES FOR EVERY OCCASION</h2>
           <h2 class="text-3xl font-semibold text-slate-500 mb-8">Our Services</h2>
@@ -86,7 +94,7 @@
         </div>
       </section>
 
-      <section id="reviews" class="bg-[#A48111] px-7 py-16 md:py-36 md:px-16">
+      <section id="reviews" class="reveal bg-[#A48111] px-7 py-16 md:py-36 md:px-16">
         <div class="container">
           <h2 class="text-[11px] lg:text-[12px] text-white font-semibold mb-4 tracking-widest">HEAR FROM OUR CUSTOMERS</h2>
           <h2 class="text-3xl font-semibold text-white mb-6">Reviews</h2>
@@ -107,7 +115,7 @@
       </section>
 
 
-      <section id="contact" class="px-7 py-16 md:py-36 md:px-16">
+      <section id="contact" class="reveal px-7 py-16 md:py-36 md:px-16">
         <div class="container">
           <h2 class="text-[11px] lg:text-[12px] text-[#A48111] font-semibold mb-4 tracking-widest">REACH OUT TO US</h2>
           <h2 class="text-3xl font-semibold text-slate-500 mb-6">Get in touch</h2>
@@ -139,7 +147,14 @@
 
             <div>
                 <h1 class='text-white text-2xl mb-2'>Social Links</h1>
-                
+                <div class="flex gap-4">
+                  <a href="https://www.instagram.com/nikkibeautymaison" target="_blank" class="text-white text-2xl hover:text-[#A48111] duration-300" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://wa.me/447828503409" target="_blank" class="text-white text-2xl hover:text-[#A48111] duration-300" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
             </div>
 
             </div>
