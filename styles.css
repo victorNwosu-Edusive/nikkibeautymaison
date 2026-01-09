@@ -60,6 +60,10 @@ body{font-family:Lexend,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue"
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
   }
+
+  .nav-toggle span:nth-child(2) {
+    width:70%;
+  }
   .nav-toggle.open span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
