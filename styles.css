@@ -115,6 +115,44 @@ body{font-family:Lexend,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue"
 .reveal.visible > *:nth-child(3) { transition-delay: 0.3s; }
 .reveal.visible > *:nth-child(4) { transition-delay: 0.4s; }
 
+/* Marquee animation for review cards */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.reviews-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.reviews-marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.reviews-marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.review-card {
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: 260px;
+    margin-right: 1rem;
+  }
+  .reviews-marquee-content {
+    animation-duration: 30s;
+  }
+}
+
 /* Background Decorations */
 .bg-blob {
   position: absolute;
