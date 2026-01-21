@@ -75,7 +75,18 @@
                   </div>
                   <p class="text-slate-500 text-sm leading-relaxed">The complete wedding experience including bespoke glam for both the bride and a bridesmaid.</p>
                 </div>
+
+                <!-- Bridal Trial -->
+                <div class="group">
+                  <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">Bridal Trial</h3>
+                    <div class="flex-grow border-b border-dotted border-slate-200 mx-4"></div>
+                    <span class="text-xl font-medium text-[#000435]">£130</span>
+                  </div>
+                  <p class="text-slate-500 text-sm leading-relaxed">A preview session to perfect your bridal look before the big day. Available in-studio.</p>
+                </div>
             </div>
+            
           </section>
 
           <!-- Traditional Category -->
@@ -156,14 +167,92 @@
                   <p class="text-slate-500 text-sm leading-relaxed">On-location travel fee for bookings outside our primary studio. Pricing based on distance.</p>
                 </div>
 
-                <!-- Media -->
+                <!-- Out of Hours -->
                 <div class="group">
                   <div class="flex justify-between items-baseline mb-2">
-                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">Media Package</h3>
+                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">Out of Hours Fee</h3>
                     <div class="flex-grow border-b border-dotted border-slate-200 mx-4"></div>
-                    <span class="text-xl font-medium text-[#000435]">£15–20</span>
+                    <span class="text-xl font-medium text-[#000435]">£15</span>
                   </div>
-                  <p class="text-slate-500 text-sm leading-relaxed">Capture your look with professional photography and video editing options.</p>
+                  <p class="text-slate-500 text-sm leading-relaxed">Applied to appointments scheduled outside regular studio hours (early morning or late evening).</p>
+                </div>
+            </div>
+          </section>
+
+          <!-- Photoshoot Session Category -->
+          <section class="space-y-8">
+            <div class="flex items-baseline justify-between border-b border-slate-100 pb-4">
+                <h2 class="text-3xl font-instrument text-[#A48111]">Photoshoot Session</h2>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">In-Studio Only</span>
+            </div>
+            
+            <div class="space-y-10">
+                <!-- 1 Outfit -->
+                <div class="group">
+                  <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">1 Outfit with Makeup</h3>
+                    <div class="flex-grow border-b border-dotted border-slate-200 mx-4"></div>
+                    <span class="text-xl font-medium text-[#000435]">£120</span>
+                  </div>
+                  <p class="text-slate-500 text-sm leading-relaxed">Includes professional makeup application and 4 high-quality edited photos.</p>
+                </div>
+
+                <!-- 2 Outfits -->
+                <div class="group">
+                  <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">2 Outfits with Makeup</h3>
+                    <div class="flex-grow border-b border-dotted border-slate-200 mx-4"></div>
+                    <span class="text-xl font-medium text-[#000435]">£180</span>
+                  </div>
+                  <p class="text-slate-500 text-sm leading-relaxed">Includes professional makeup application and 8 high-quality edited photos.</p>
+                </div>
+
+                <!-- 3 Outfits -->
+                <div class="group">
+                  <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="text-xl font-semibold text-[#000435] group-hover:text-[#A48111] transition-colors">3 Outfits with Makeup</h3>
+                    <div class="flex-grow border-b border-dotted border-slate-200 mx-4"></div>
+                    <span class="text-xl font-medium text-[#000435]">£250</span>
+                  </div>
+                  <p class="text-slate-500 text-sm leading-relaxed">Includes professional makeup application and 12 high-quality edited photos.</p>
+                </div>
+            </div>
+
+            <!-- Photography Carousel -->
+            <div class="mt-12 relative overflow-hidden rounded-2xl group/carousel">
+                <div id="photographyCarousel" class="flex transition-transform duration-500 ease-out">
+                    <div class="min-w-full h-80">
+                        <img src="assets/photog (1).jpg" alt="Photography work 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="min-w-full h-80">
+                        <img src="assets/photog (2).JPG" alt="Photography work 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="min-w-full h-80">
+                        <img src="assets/photog (3).JPG" alt="Photography work 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="min-w-full h-80">
+                        <img src="assets/photog (4).JPG" alt="Photography work 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="min-w-full h-80">
+                        <img src="assets/photog (5).JPG" alt="Photography work 5" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Indicators -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-white/40 carousel-indicator active" data-index="0"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 carousel-indicator" data-index="1"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 carousel-indicator" data-index="2"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 carousel-indicator" data-index="3"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 carousel-indicator" data-index="4"></div>
                 </div>
             </div>
           </section>

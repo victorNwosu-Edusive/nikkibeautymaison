@@ -184,3 +184,11 @@ body{font-family:Lexend,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue"
 .icon-blue{color:var(--brand-blue)}
 .icon-gold{color:var(--brand-blue)}
 
+/* Carousel Styles */
+.carousel-indicator.active {
+    background-color: white !important;
+    width: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+

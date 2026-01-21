@@ -53,7 +53,7 @@
         <div class="max-w-4xl mx-auto mb-10 space-y-8 bg-slate-50 p-8 rounded-lg border border-gray-200">
           <div>
             <h2 class="text-[17px] md:text-xl font-bold text-[#000435] mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-circle-info text-sky-600"></i> BOOKING & SALON POLICY
+              <i class="fa-solid fa-circle-info text-sky-600"></i> BOOKING & STUDIO POLICY
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -119,12 +119,24 @@
               <span class="text-sm font-medium text-slate-800">Event type*</span>
               <select name="event" required id="eventSelect" class="mt-1 border border-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-300">
                 <option value="" data-price="0">Select an event</option>
-                <option value="Bridal Glam" data-price="250">Bridal Glam - £250</option>
-                <option value="Bridal Bundle" data-price="400">Bridal Bundle - £400</option>
-                <option value="Full / Soft Glam" data-price="70">Full / Soft Glam - £70</option>
-                <option value="Simple Glam" data-price="55">Simple Glam - £55</option>
-                <option value="Traditional Glam" data-price="250">Traditional Glam - £250</option>
-                <option value="Edo State Bridal & Trad" data-price="450">Edo State Bridal & Trad - £450</option>
+                <optgroup label="Bridal Services">
+                  <option value="Bridal Glam" data-price="250">Bridal Glam - £250</option>
+                  <option value="Bridal Bundle" data-price="400">Bridal Bundle - £400</option>
+                  <option value="Bridal Trial" data-price="130">Bridal Trial - £130</option>
+                </optgroup>
+                <optgroup label="Studio Services">
+                  <option value="Full / Soft Glam" data-price="70">Full / Soft Glam - £70</option>
+                  <option value="Simple Glam" data-price="55">Simple Glam - £55</option>
+                </optgroup>
+                <optgroup label="Traditional Services">
+                  <option value="Traditional Glam" data-price="250">Traditional Glam - £250</option>
+                  <option value="Edo State Bridal & Trad" data-price="450">Edo State Bridal & Trad - £450</option>
+                </optgroup>
+                <optgroup label="Photoshoot Sessions">
+                  <option value="Photoshoot (1 Outfit)" data-price="120">1 Outfit with Makeup - £120</option>
+                  <option value="Photoshoot (2 Outfits)" data-price="180">2 Outfits with Makeup - £180</option>
+                  <option value="Photoshoot (3 Outfits)" data-price="250">3 Outfits with Makeup - £250</option>
+                </optgroup>
               </select>
             </label>
           </div>
@@ -137,12 +149,8 @@
                 <span class="text-sm text-slate-700">Home Service (+£30)</span>
               </label>
               <label class="flex items-center gap-2 p-3 border border-black/10 rounded-md cursor-pointer hover:bg-slate-50">
-                <input type="checkbox" name="addons" value="Photography" data-price="15" class="addon-checkbox w-4 h-4" />
-                <span class="text-sm text-slate-700">Photography (+£15)</span>
-              </label>
-              <label class="flex items-center gap-2 p-3 border border-black/10 rounded-md cursor-pointer hover:bg-slate-50">
-                <input type="checkbox" name="addons" value="Video & Photo" data-price="20" class="addon-checkbox w-4 h-4" />
-                <span class="text-sm text-slate-700">Video & Photo (+£20)</span>
+                <input type="checkbox" name="addons" value="Out of Hours" data-price="15" class="addon-checkbox w-4 h-4" />
+                <span class="text-sm text-slate-700">Out of Hours Fee (+£15)</span>
               </label>
             </div>
           </div>

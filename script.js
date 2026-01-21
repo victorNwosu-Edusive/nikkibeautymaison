@@ -51,6 +51,68 @@ document.addEventListener('DOMContentLoaded',function(){
   },{threshold:0.12});
   reveals.forEach(r=>obs.observe(r));
 
+  // Photography Carousel
+  const carousel = document.getElementById('photographyCarousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  
+  if (carousel && prevBtn && nextBtn) {
+    let currentIndex = 0;
+    const totalSlides = 5;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+          indicator.classList.add('active');
+          indicator.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+        } else {
+          indicator.classList.remove('active');
+          indicator.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Indicator click functionality
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    // Auto-advance carousel every 5 seconds
+    let autoplayInterval = setInterval(nextSlide, 5000);
+
+    // Pause autoplay on hover
+    carousel.parentElement.addEventListener('mouseenter', () => {
+      clearInterval(autoplayInterval);
+    });
+
+    // Resume autoplay when not hovering
+    carousel.parentElement.addEventListener('mouseleave', () => {
+      autoplayInterval = setInterval(nextSlide, 5000);
+    });
+  }
+
   // Pricing Logic
   const eventSelect = document.getElementById('eventSelect');
   const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
