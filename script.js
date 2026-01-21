@@ -174,33 +174,21 @@ document.addEventListener('DOMContentLoaded',function(){
         message: bookingForm.message.value,
         total_price: totalPriceInput.value
       };
-
-      // Replace these with your actual Service ID and Template ID from EmailJS
-      // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      //   .then(function() {
-      //      formFeedback.textContent = 'Request sent successfully! We will contact you soon.';
-      //      formFeedback.className = 'text-sm text-green-600';
-      //      bookingForm.reset();
-      //      calculateTotal();
-      //   }, function(error) {
-      //      formFeedback.textContent = 'Failed to send request. Please try again or contact us via WhatsApp.';
-      //      formFeedback.className = 'text-sm text-red-600';
-      //   })
-      //   .finally(() => {
-      //      submitBtn.textContent = originalBtnText;
-      //      submitBtn.disabled = false;
-      //   });
-
-      // Simulation for now (since I don't have the user's IDs)
-      console.log('Form submitted with:', templateParams);
-      setTimeout(() => {
-        formFeedback.textContent = 'Request sent successfully! (Simulation)';
-        formFeedback.className = 'text-sm text-green-600';
-        submitBtn.textContent = originalBtnText;
-        submitBtn.disabled = false;
-        bookingForm.reset();
-        calculateTotal();
-      }, 1500);
+      emailjs.send('service_fipwuse', 'template_9izydvj', templateParams)
+        .then(function() {
+           formFeedback.textContent = 'Request sent successfully! We will contact you soon.';
+           formFeedback.className = 'text-sm text-green-600';
+           bookingForm.reset();
+           calculateTotal();
+        }, function(error) {
+           formFeedback.textContent = 'Failed to send request. Please try again or contact us via WhatsApp.';
+           formFeedback.className = 'text-sm text-red-600';
+           console.error('EmailJS Error:', error);
+        })
+        .finally(() => {
+           submitBtn.textContent = originalBtnText;
+           submitBtn.disabled = false;
+        });
     });
   }
 });
