@@ -192,3 +192,13 @@ body{font-family:Lexend,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue"
     transition: all 0.3s ease;
 }
 
+/* Modal Styles */
+#feedbackModal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#feedbackModal.show #modalContent {
+    transform: scale(1);
+}
+

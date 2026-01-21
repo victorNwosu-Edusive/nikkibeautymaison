@@ -146,7 +146,37 @@ document.addEventListener('DOMContentLoaded',function(){
 
   // EmailJS Integration
   const bookingForm = document.getElementById('bookingForm');
-  const formFeedback = document.getElementById('formFeedback');
+  const feedbackModal = document.getElementById('feedbackModal');
+  const modalIcon = document.getElementById('modalIcon');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalMessage = document.getElementById('modalMessage');
+  const closeModal = document.getElementById('closeModal');
+
+  function showFeedback(isSuccess, title, message) {
+    if (!feedbackModal) return;
+    
+    // Set colors and icon based on success/error
+    if (isSuccess) {
+      modalIcon.className = 'w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4 bg-green-100 text-green-600';
+      modalIcon.innerHTML = '<i class="fa-solid fa-check text-2xl"></i>';
+    } else {
+      modalIcon.className = 'w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4 bg-red-100 text-red-600';
+      modalIcon.innerHTML = '<i class="fa-solid fa-xmark text-2xl"></i>';
+    }
+    
+    modalTitle.textContent = title;
+    modalMessage.textContent = message;
+    
+    feedbackModal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      feedbackModal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+  }
 
   if (bookingForm) {
     bookingForm.addEventListener('submit', function(event) {
@@ -176,13 +206,11 @@ document.addEventListener('DOMContentLoaded',function(){
       };
       emailjs.send('service_fipwuse', 'template_9izydvj', templateParams)
         .then(function() {
-           formFeedback.textContent = 'Request sent successfully! We will contact you soon.';
-           formFeedback.className = 'text-sm text-green-600';
+           showFeedback(true, 'Booking Requested!', 'Your request has been sent successfully. We will contact you soon to confirm availability.');
            bookingForm.reset();
            calculateTotal();
         }, function(error) {
-           formFeedback.textContent = 'Failed to send request. Please try again or contact us via WhatsApp.';
-           formFeedback.className = 'text-sm text-red-600';
+           showFeedback(false, 'Submission Failed', 'Failed to send request. Please try again or contact us via WhatsApp.');
            console.error('EmailJS Error:', error);
         })
         .finally(() => {
