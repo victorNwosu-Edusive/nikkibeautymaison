@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded',function(){
            formFeedback.textContent = 'Failed to send request. Please try again or contact us via WhatsApp.';
            formFeedback.className = 'text-sm text-red-600';
            console.error('EmailJS Error:', error);
+           alert('EmailJS Error: ' + JSON.stringify(error));
         })
         .finally(() => {
            submitBtn.textContent = originalBtnText;
