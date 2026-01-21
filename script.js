@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function(){
   
   if (carousel && prevBtn && nextBtn) {
     let currentIndex = 0;
-    const totalSlides = 3;
+    const totalSlides = 5;
 
     function updateCarousel() {
       const offset = -currentIndex * 100;
