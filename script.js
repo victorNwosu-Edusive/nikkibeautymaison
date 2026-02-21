@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded',function(){
+  // Contact Popup - Show on scroll (but not on booking page)
+  const isBookingPage = window.location.pathname.includes('booking.html');
+  if (!isBookingPage) {
+    const contactPopup = document.getElementById('contactPopup');
+    let hasScrolled = false;
+
+    window.addEventListener('scroll', () => {
+      if (!hasScrolled && window.scrollY > 200) {
+        contactPopup.classList.add('visible');
+        hasScrolled = true;
+      }
+    });
+  }
+
   // Year
   const y = new Date().getFullYear();
   const yearEl = document.getElementById('year');
